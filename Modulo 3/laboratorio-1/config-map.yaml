@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  DATABASE_URL: "mongodb://mongo-server:27017/mydb"
+  API_KEY: "my-api-key"
