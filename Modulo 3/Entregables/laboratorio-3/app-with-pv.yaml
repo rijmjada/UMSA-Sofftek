@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: app-with-pvc
+  name: app-with-pv
 spec:
   containers:
   - name: app-container
-    image: nginx
+    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
     volumeMounts:
     - name: data-volume
-      mountPath: "/app-data"
+      mountPath: C:\app-data
   volumes:
   - name: data-volume
     persistentVolumeClaim:
