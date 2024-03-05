@@ -5,10 +5,10 @@ metadata:
 spec:
   containers:
   - name: app-container
-    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
+    image: nginx:latest
     volumeMounts:
     - name: data-volume
-      mountPath: C:\app-data
+      mountPath: /app-data
   volumes:
   - name: data-volume
     persistentVolumeClaim:

@@ -13,3 +13,6 @@ spec:
     - podSelector:
         matchLabels:
           app: app-b
+    ports:
+    - protocol: TCP
+      port: 80
